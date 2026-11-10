@@ -7,7 +7,13 @@ cask "pare" do
   desc "Safety-first disk cleanup for developers"
   homepage "https://github.com/yudgnahk/pare"
 
-  depends_on macos: ">= :ventura"
+  livecheck do
+    url :url
+    strategy :git
+    regex(/^v?(\d+(?:\.\d+)+(?:-rc\.\d+)?)$/i)
+  end
+
+  depends_on macos: :ventura
 
   app "Pare.app"
 

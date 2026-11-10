@@ -3,7 +3,9 @@
 Homebrew casks for apps by [@yudgnahk](https://github.com/yudgnahk).
 
 ```bash
-brew install --cask yudgnahk/tap/pare
+brew tap yudgnahk/tap
+brew trust yudgnahk/tap      # Homebrew 7+ refuses casks from untrusted taps; skip on older Homebrew
+brew install --cask pare
 ```
 
 | Cask | App |
